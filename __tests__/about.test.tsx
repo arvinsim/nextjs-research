@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import "jest-styled-components";
 import About from "../pages/about";
 
 describe("About", () => {
