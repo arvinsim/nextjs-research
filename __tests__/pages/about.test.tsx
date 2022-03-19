@@ -1,7 +1,12 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import About from "../../pages/about";
 
-describe("About Page", () => {
-  const { getByText } = render(<About />);
-  expect(getByText("About Page")).toBeTruthy();
+describe("About", () => {
+  it("renders text", () => {
+    render(<About />);
+
+    const aboutText = screen.getByText("About Page");
+    expect(aboutText).toBeInTheDocument();
+  });
 });
