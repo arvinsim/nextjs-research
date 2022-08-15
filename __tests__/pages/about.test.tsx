@@ -1,18 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import About, { getServerSideProps } from "../../pages/about";
-import { sampleUtilityFunction } from "../../utilities";
-
-jest.mock("../../utilities", () => {
-  const originalModule = jest.requireActual("../../utilities");
-
-  //Mock the default export and named export 'foo'
-  return {
-    __esModule: true,
-    ...originalModule,
-    sampleUtilityFunction: jest.fn(() => "foobar"),
-  };
-});
+import * as utilities from "../../utilities";
 
 describe("About", () => {
   afterAll(() => {
@@ -20,22 +9,30 @@ describe("About", () => {
   });
 
   it("renders text", () => {
-    render(<About />);
+    const title= "This is the about page title";
+    const description = "This is the about page description";
+    render(<About title={title} description={description}/>);
 
     const aboutText = screen.getByText("About Page");
     expect(aboutText).toBeInTheDocument();
+
+    const titleText = screen.getByText(title);
+    expect(titleText).toBeInTheDocument();
+
+    const descriptionText = screen.getByText(description);
+    expect(descriptionText).toBeInTheDocument();
   });
 
   describe("getServerSideProps", () => {
-    it("should set submessage", () => {
+    it("should set props", async () => {
+      jest.spyOn(utilities, 'getRandomlyGeneratedNumbers').mockImplementation(() => [4,5,6]);
       const context = {};
-      const result = getServerSideProps(context as GetServerSidePropsContext);
+      const result = await getServerSideProps(context as GetServerSidePropsContext);
 
-      expect(sampleUtilityFunction).toBeCalledWith("1", 2, true);
       expect(result).toEqual({
         props: {
-          message: "A message from our sponsors",
-          submessage: "foobar",
+          title: "This is the about page title",
+          sum: 15
         },
       });
     });
