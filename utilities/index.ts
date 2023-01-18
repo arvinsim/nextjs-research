@@ -10,3 +10,20 @@ export function getSum(list: number[]) {
 export function getRandomlyGeneratedNumbers(): number[] {
   return [1, 2, 3];
 }
+
+type BooleanFlags = {
+  showPage: boolean
+  showHeader: boolean
+}
+
+type MixedFlags = {
+  status: string
+  counter: number
+}
+
+type OptionsFlags<Type> =  {
+  [Property in keyof Type]: boolean
+}
+
+type Flags = OptionsFlags<MixedFlags>;
+
