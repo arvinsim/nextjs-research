@@ -2,7 +2,7 @@
   "name": "nextjs-research",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 9999",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
