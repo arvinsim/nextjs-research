@@ -1,15 +1,17 @@
 import React from "react";
 import type { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import {getRandomlyGeneratedNumbers, getSum } from "../utilities";
+import ExtendStyled from "../components/ExtendStyled";
 
 function About(props: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const { title, description } = props;
 
   return (
     <div>
-      <div>About Page</div>
+      <div className={'page-title'}>About Page</div>
       <div>{title}</div>
       <div>{description}</div>
+        <ExtendStyled />
     </div>
   );
 }
