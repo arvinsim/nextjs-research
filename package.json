@@ -13,9 +13,9 @@
   },
   "dependencies": {
     "@vanilla-extract/css": "^1.6.8",
-    "framer-motion": "^10.12.16",
     "axios": "^1.3.5",
-    "next": "^12.2.2",
+    "framer-motion": "^10.12.16",
+    "next": "^13.4.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.5"
@@ -33,7 +33,7 @@
     "@types/styled-components": "^5.1.19",
     "autoprefixer": "^10.4.2",
     "eslint": "8.6.0",
-    "eslint-config-next": "12.0.7",
+    "eslint-config-next": "^13.4.10",
     "jest": "^27.5.1",
     "playwright": "^1.32.3",
     "prettier": "^2.6.0",
