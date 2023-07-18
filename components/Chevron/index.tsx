@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const Chevron: React.FC = () => {
   const [direction, setDirection] = useState("down");
