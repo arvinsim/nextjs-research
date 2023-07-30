@@ -5,6 +5,8 @@ function Debounce() {
   const [loading, setLoading] = React.useState(false);
 
   const onSubmit = (e: React.SyntheticEvent) => {
+    // Do Nothing
+  };
 
   return (
     <div>
