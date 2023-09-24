@@ -7,6 +7,10 @@ type People = {
   name: string;
 };
 
+function delay(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 const apiCallPeople = async () => {
   const data: People[] = [];
 
@@ -17,6 +21,8 @@ const apiCallPeople = async () => {
       name: randFullName(),
     });
   }
+
+  await delay(3000);
 
   return {
     data,
@@ -55,11 +61,14 @@ function InfiniteScrolling() {
   });
 
   return (
-    <div className={"container mx-auto bg-gray-400"}>
+    <div className={"container mx-auto"}>
       <h1 className={"text-4xl text-center"}>Infinite Scrolling</h1>
       <div className="grid grid-cols-3 gap-4">
         {people.map((person) => (
-          <div key={person.email} className="flex flex-col items-center">
+          <div
+            key={person.email}
+            className="flex flex-col items-center border-solid border-2 border-sky-500 bg-gray-400"
+          >
             <img
               src={person.avatar}
               alt={person.name}
@@ -70,10 +79,7 @@ function InfiniteScrolling() {
           </div>
         ))}
         {loading && (
-          <div
-            className={showLoading ? "loading" : ""}
-            style={{ opacity: showLoading ? 1 : 0 }}
-          >
+          <div className={`${showLoading && "opacity-1"} text-8xl text-center`}>
             Loading...
           </div>
         )}
