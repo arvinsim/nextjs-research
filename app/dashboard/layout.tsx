@@ -14,6 +14,7 @@ function DashboardLayout(props: { children: any }) {
           <Heading>This is the dashboard page.</Heading>
           <ul>
             <li>
+              <Link href={"/dashboard/"}>Dashboard</Link>
               <Link href={"/dashboard/message"}>Message</Link>
               <Link href={"/dashboard/profile"}>Profile</Link>
             </li>
