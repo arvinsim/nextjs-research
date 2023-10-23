@@ -16,7 +16,7 @@ function DashboardLayout(props: { children: any }) {
             <li>
               <Link href={"/dashboard/"}>Dashboard</Link>
               <Link href={"/dashboard/message"}>Message</Link>
-              <Link href={"/dashboard/profile"}>Profile</Link>
+              <Link href={"/dashboard/name"}>Name</Link>
             </li>
           </ul>
         </div>
