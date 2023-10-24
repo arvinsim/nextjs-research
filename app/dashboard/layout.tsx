@@ -12,10 +12,14 @@ function DashboardLayout(props: { children: any }) {
       <Container>
         <div>
           <Heading>This is the dashboard page.</Heading>
-          <ul>
+          <ul className={"list-disc"}>
             <li>
               <Link href={"/dashboard/"}>Dashboard</Link>
+            </li>
+            <li>
               <Link href={"/dashboard/message"}>Message</Link>
+            </li>
+            <li>
               <Link href={"/dashboard/name"}>Name</Link>
             </li>
           </ul>

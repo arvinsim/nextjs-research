@@ -1,7 +1,6 @@
 import "../styles/globals.css";
 import App from "next/app";
 import type { AppInitialProps } from "next/app";
-import "@radix-ui/themes/styles.css";
 
 class MyApp extends App {
   static async getInitialProps({
