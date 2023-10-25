@@ -8,7 +8,7 @@ function DashboardLayout(props: { children: any }) {
   console.log("DashboardLayout");
 
   return (
-    <div className={"bg-gray-800 text-stone-50"}>
+    <div className={"bg-gray-800 text-stone-50 h-screen"}>
       <Container>
         <div>
           <Heading>This is the dashboard page.</Heading>
