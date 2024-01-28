@@ -1,8 +1,9 @@
+import "../styles/globals.css";
+import "@radix-ui/themes/styles.css";
+
 import React from "react";
 import { Theme } from "@radix-ui/themes";
 
-import "../styles/globals.css";
-import "@radix-ui/themes/styles.css";
 
 export const metadata = {
   title: "Next.js",

@@ -8,14 +8,19 @@ function DashboardLayout(props: { children: any }) {
   console.log("DashboardLayout");
 
   return (
-    <div className={"bg-gray-800 text-stone-50"}>
+    <div className={"bg-gray-800 text-stone-50 h-screen"}>
       <Container>
         <div>
           <Heading>This is the dashboard page.</Heading>
-          <ul>
+          <ul className={"list-disc"}>
+            <li>
+              <Link href={"/dashboard/"}>Dashboard</Link>
+            </li>
             <li>
               <Link href={"/dashboard/message"}>Message</Link>
-              <Link href={"/dashboard/profile"}>Profile</Link>
+            </li>
+            <li>
+              <Link href={"/dashboard/name"}>Name</Link>
             </li>
           </ul>
         </div>
