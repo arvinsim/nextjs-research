@@ -5,8 +5,6 @@ import Link from "next/link";
 function DashboardLayout(props: { children: any }) {
   const { children } = props;
 
-  console.log("DashboardLayout");
-
   return (
     <div className={"bg-gray-800 text-stone-50 h-screen"}>
       <Container>
