@@ -1,28 +1,21 @@
 import React from "react";
-import { Heading, Container } from "@radix-ui/themes";
+import {Heading, Container, Flex, Box} from "@radix-ui/themes";
 import Link from "next/link";
 
-function DashboardLayout(props: { children: any }) {
-  const { children } = props;
+function DashboardLayout({children, users, links}: { children: any, links: any, users: any}) {
 
   return (
     <div className={"bg-gray-800 text-stone-50 h-screen"}>
       <Container>
-        <div>
-          <Heading>This is the dashboard page.</Heading>
-          <ul className={"list-disc"}>
-            <li>
-              <Link href={"/dashboard/"}>Dashboard</Link>
-            </li>
-            <li>
-              <Link href={"/dashboard/message"}>Message</Link>
-            </li>
-            <li>
-              <Link href={"/dashboard/name"}>Name</Link>
-            </li>
-          </ul>
-        </div>
-        <div>{children}</div>
+        <Box className={'bg-red-600'}>Navbar</Box>
+        <Flex direction="row" gap="3">
+          <Box className={'bg-blue-600'}>
+            <Heading>Dashboard</Heading>
+            {links}
+            {users}
+          </Box>
+          <Box width="9" className={'bg-green-600'}>{children}</Box>
+        </Flex>
       </Container>
     </div>
   );
