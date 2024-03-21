@@ -8,17 +8,6 @@ class MyApp extends App {
     ctx,
   }: any): Promise<AppInitialProps> {
     const pageProps = { description: "This is the description from MyApp" };
-
-    console.log("i am called before");
-
-    // This is from Viki Web. It is supposed to extend the props of Component
-    if (Component.getInitialProps) {
-      const componentPageProps = await Component.getServerSideProps(ctx);
-      Object.assign(pageProps, componentPageProps);
-    }
-
-    console.log("i am called after");
-
     return { pageProps };
   }
 
