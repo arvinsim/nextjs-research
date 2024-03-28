@@ -1,7 +1,9 @@
 import React from 'react'
 
 type BlogArticlePageProps = {
-    id: string;
+    params: {
+        id: string;
+    }
 }
 
 export default function BlogArticlePage({ params }: BlogArticlePageProps) {

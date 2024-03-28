@@ -1,7 +1,12 @@
 import React from 'react';
 import Link from "next/link";
 
-function ProfileLayout(props) {
+type ProfileLayoutProps = {
+    settings: React.ReactNode;
+    children: React.ReactNode;
+}
+
+function ProfileLayout(props: ProfileLayoutProps) {
     const {children, settings} = props;
     const timeRightNow = new Date().toLocaleTimeString()
 
