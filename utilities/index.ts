@@ -11,6 +11,15 @@ export function getRandomlyGeneratedNumbers(): number[] {
   return [1, 2, 3];
 }
 
+export const fetchDataWithDelay = () => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve("Data loaded");
+    }, 5000); // Delay for 5 seconds
+  });
+};
+
+
 type BooleanFlags = {
   showPage: boolean
   showHeader: boolean
