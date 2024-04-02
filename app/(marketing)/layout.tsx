@@ -1,5 +1,5 @@
 import React from "react";
-import MarketingLinks from "./MarktingLinks";
+import MarketingLinks from "./MarketingLinks";
 
 type MarketingLayoutProps = {
     children: React.ReactNode
