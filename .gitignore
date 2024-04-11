@@ -37,6 +37,7 @@ yarn-error.log*
 *.tsbuildinfo
 
 .idea
+.vscode
 /test-results/
 /playwright-report/
 /playwright/.cache/
