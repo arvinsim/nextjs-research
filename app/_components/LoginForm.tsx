@@ -20,7 +20,7 @@ function LoginForm() {
 
     let redirectPath: string | null = null; 
     try {
-      const data = await fetch('/api/login', {
+      const data = await fetch('/api/log-in', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

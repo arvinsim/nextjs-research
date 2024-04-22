@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from "next/link";
+import { cookies } from 'next/headers'
 
 type ProfileLayoutProps = {
     settings: React.ReactNode;
@@ -12,8 +13,10 @@ function ProfileLayout(props: ProfileLayoutProps) {
 
 
     const isAuthenticated = () => {
-        // TODO: Implement authentication logic
-        return false;
+        const cookieStore = cookies()
+        const auth = cookieStore.get('auth')
+
+        return auth?.value === 'spamandeggs'
     }
 
     if (!isAuthenticated()) {

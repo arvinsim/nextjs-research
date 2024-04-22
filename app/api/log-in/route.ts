@@ -6,7 +6,7 @@ export async function POST(request: Request) {
     if (username === 'arthur' && password === 'admin123') {
         const options: ResponseInit = {
             headers: {
-                'Set-Cookie': `auth=secret_token; HttpOnly; Path=/;`,
+                'Set-Cookie': `auth=spamandeggs; HttpOnly; Path=/;`,
             },
         };
         return new Response('Login successful', options);
