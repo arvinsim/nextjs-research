@@ -54,7 +54,7 @@ return (
                 id="username"
                 name="username"
                 onChange={handleUsernameChange}
-                className="border-2 border-black"
+                className="border-2 border-white"
             />
             <br />
             <label htmlFor="password">Password:</label>
@@ -64,11 +64,13 @@ return (
                 id="password"
                 name="password"
                 onChange={handlePasswordChange}
-                className="border-2 border-black"
+                className="border-2 border-white"
             />
-            <button type="submit" className={"bg-blue-600 text-amber-100 rounded"}>
-                Log In
-            </button>
+            <div>
+              <button type="submit" className={"bg-blue-600 text-amber-100 rounded px-3"}>
+                  Log In
+              </button>
+            </div>
         </form>
 );
 }
