@@ -13,6 +13,9 @@ class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
+
+    console.log('test push')
+
     return <Component {...pageProps} />;
   }
 }
