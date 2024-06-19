@@ -3,7 +3,7 @@ import "@radix-ui/themes/styles.css";
 
 import React from "react";
 import { Theme } from "@radix-ui/themes";
-
+import LogoutButton from "./_components/LogoutButton";
 
 export const metadata = {
   title: "Next.js",
@@ -18,7 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Theme appearance="dark">{children}</Theme>
+        <Theme appearance="dark">
+          <div className="bg-blue-500 text-white p-4">
+              <LogoutButton />
+          </div>
+          {children}
+        </Theme>
       </body>
     </html>
   );

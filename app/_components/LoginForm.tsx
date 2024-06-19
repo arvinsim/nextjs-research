@@ -1,7 +1,6 @@
 'use client'
 import React from "react";
 import { redirect } from 'next/navigation'
-import { log } from "console";
 
 function LoginForm() {
   const [username, setUsername] = React.useState("");
@@ -38,10 +37,10 @@ function LoginForm() {
       }
     } catch (error) {
         alert('There was an error while trying to log in')
-    } finally {
-        if (redirectPath) {
-            redirect(redirectPath)
-        }
+    }
+
+    if (redirectPath) {
+        redirect(redirectPath)
     }
   };
 
